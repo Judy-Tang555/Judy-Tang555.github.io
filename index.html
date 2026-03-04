@@ -1,17 +1,48 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>BMTD的博客</title>
-    <style>
-        body{font-family:Segoe UI,Arial,Helvetica,sans-serif;padding:24px}
-        a.button{display:inline-block;padding:8px 12px;background:#3478f6;color:#fff;border-radius:4px;text-decoration:none}
-    </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>BMTD的博客</title>
+        <style>
+                :root{--bg:#0f1724;--card:#0b1220;--accent:#5bc0eb;--muted:#9aa4b2}
+                *{box-sizing:border-box}
+                body{font-family:Segoe UI,Arial,Helvetica,sans-serif;margin:0;background:linear-gradient(180deg,#071027 0%, #0f1724 100%);color:#e6eef8}
+                .wrap{max-width:1000px;margin:0 auto;padding:40px 20px}
+                .hero{display:flex;gap:24px;align-items:center;padding:28px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+                .avatar{width:120px;height:120px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7bd389);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042033;font-size:28px}
+                .hero .meta h1{margin:0 0 8px 0;font-size:28px}
+                .hero .meta p{margin:0;color:var(--muted)}
+                .buttons{margin-top:12px;display:flex;gap:10px}
+                .btn{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+                .btn.primary{background:linear-gradient(90deg,var(--accent),#7bd389);color:#042033}
+                .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--muted)}
+                .links-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:22px}
+                .card{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px}
+                .small{color:var(--muted);font-size:13px}
+                @media (max-width:640px){.hero{flex-direction:column;align-items:flex-start}.avatar{width:96px;height:96px}}
+        </style>
 </head>
 <body>
-<h1>BMTD 的博客</h1>
-<p>欢迎来到 thr 的博客！</p>
-<p><a class="button" href="daily.html">📘 每日记录</a></p>
+    <div class="wrap">
+        <section class="hero">
+            <div class="avatar">BMTD</div>
+            <div class="meta">
+                <h1>BMTD 的博客</h1>
+                <p class="small">记录学习与日常的小想法 — 简洁、易用、离线可用。</p>
+                <div class="buttons">
+                    <a class="btn primary" href="daily.html">📘 每日记录</a>
+                    <a class="btn ghost" href="links.html">🔗 常用链接</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="links-grid" aria-label="快速链接">
+            <div class="card"><strong>写作</strong><div class="small">写博客、日记与备忘</div></div>
+            <div class="card"><strong>学习</strong><div class="small">笔记、教程与课程</div></div>
+            <div class="card"><strong>工具</strong><div class="small">在线工具与常用网站</div></div>
+            <div class="card"><strong>项目</strong><div class="small">仓库与演示链接</div></div>
+        </section>
+    </div>
 </body>
 </html>
