@@ -3,3 +3,11 @@
 html,body{background:var(--bg);color:var(--text)}
 a{color:var(--accent)}
 .small{color:var(--muted)}
+
+/* 全局链接样式：去掉下划线 */
+a{ text-decoration: none }
+a:hover{ text-decoration: underline }
+
+/* 主题切换按钮统一样式 */
+.theme-toggle{position:fixed;right:12px;top:12px;padding:8px;border-radius:999px;border:0;background:var(--card);color:var(--text);cursor:pointer;box-shadow:0 6px 18px rgba(2,6,23,0.08);z-index:1000}
+

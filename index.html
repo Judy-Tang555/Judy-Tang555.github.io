@@ -17,7 +17,7 @@
                 .btn{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
                 .btn.primary{background:linear-gradient(90deg,var(--accent),#7bd389);color:var(--text)}
                 .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
-                .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:22px}
+                .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:22px}
                 .block{background:var(--card);padding:18px;border-radius:12px}
                 .block h3{margin:0 0 8px 0}
                 .theme-toggle{position:fixed;right:12px;top:12px;padding:8px;border-radius:999px;border:0;background:var(--card);color:var(--text);cursor:pointer;box-shadow:0 6px 18px rgba(2,6,23,0.08)}
@@ -25,7 +25,7 @@
         </style>
 </head>
 <body>
-    <button id="theme-toggle" class="theme-toggle" title="日/夜模式切换">🌙</button>
+        <button id="theme-toggle" class="theme-toggle" title="日/夜模式切换">🌙</button>
     <div class="wrap">
         <section class="hero">
             <div class="avatar">BMTD</div>
@@ -33,14 +33,12 @@
                 <h1>BMTD 的博客</h1>
                 <p class="small">记录学习与日常的小想法 — 简洁、易用、离线可用。</p>
                 <div class="buttons">
-                    <a class="btn primary" href="daily.html">📘 每日记录</a>
                     <a class="btn ghost" href="favorites.html">🔖 收藏网站</a>
                 </div>
             </div>
         </section>
 
         <section class="grid" aria-label="主要模块">
-            <a class="block" href="daily.html"><h3>每日记录</h3><p class="small">快速写日记与待办</p></a>
             <a class="block" href="study.html"><h3>学习</h3><p class="small">笔记、教程与课程</p></a>
             <a class="block" href="ai.html"><h3>人工智能</h3><p class="small">AI 相关实验与笔记</p></a>
             <a class="block" href="projects.html"><h3>项目</h3><p class="small">我的代码与演示</p></a>
