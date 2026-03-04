@@ -1,0 +1,5 @@
+:root{--bg:#ffffff;--surface:#f7fafc;--card:#ffffff;--text:#0b1220;--muted:#6b7280;--accent:#0ea5e9;--danger:#e11d48}
+[data-theme="dark"]{--bg:#071027;--surface:#0b1220;--card:rgba(255,255,255,0.02);--text:#e6eef8;--muted:#9aa4b2;--accent:#5bc0eb;--danger:#e04848}
+html,body{background:var(--bg);color:var(--text)}
+a{color:var(--accent)}
+.small{color:var(--muted)}

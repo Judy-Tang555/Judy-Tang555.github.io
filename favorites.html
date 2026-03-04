@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>收藏网站</title>
+  <link rel="stylesheet" href="assets/theme.css">
+  <link rel="stylesheet" href="assets/links.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="header">
+      <h1>收藏网站</h1>
+      <p class="desc">你的常用网站收藏。点击“＋ 添加链接”添加新条目。</p>
+      <p><a class="back" href="index.html">← 返回首页</a></p>
+    </header>
+
+    <div class="toolbar">
+      <button id="add-btn" class="add">＋ 添加链接</button>
+      <span class="small">添加后会保存在浏览器，本地可用，支持导出/清空。</span>
+      <div class="right">
+        <button id="export-links" class="ghost">导出 JSON</button>
+        <button id="clear-links" class="danger">清空全部</button>
+      </div>
+    </div>
+
+    <section class="links-container" id="links-container"></section>
+
+    <template id="group-template">
+      <div class="group">
+        <h2 class="group-title"></h2>
+        <ul class="links-list"></ul>
+      </div>
+    </template>
+
+    <template id="link-item-template">
+      <li>
+        <a class="link-url" href="#" target="_blank"></a>
+        <div class="actions">
+          <button class="btn-edit muted">编辑</button>
+          <button class="btn-delete danger">删除</button>
+        </div>
+      </li>
+    </template>
+
+    <div id="form-modal" class="modal" aria-hidden="true">
+      <div class="modal-inner">
+        <h3>添加 / 编辑 链接</h3>
+        <label>分类 <input id="input-group" placeholder="例如：开发"></label>
+        <label>标签 <input id="input-label" placeholder="例如：GitHub"></label>
+        <label>URL <input id="input-url" placeholder="https://..."></label>
+        <div class="form-actions">
+          <button id="save-link" class="primary">保存</button>
+          <button id="cancel-link" class="muted">取消</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script src="assets/links.js"></script>
+  <script src="assets/theme.js"></script>
+</body>
+</html>
