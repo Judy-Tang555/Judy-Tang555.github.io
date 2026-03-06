@@ -5,34 +5,186 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>我的博客</title>
     <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
         body {
-            margin: 0;
+            font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+            background: #f0f2f5;
             min-height: 100vh;
+            padding: 40px 20px 60px;
+            color: #2d2d2d;
+        }
+
+        .page {
+            max-width: 680px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* ── 个人卡片 ── */
+        .profile-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 28px 32px;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6ee7b7, #3b82f6);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: "Microsoft YaHei", Arial, sans-serif;
-            background: #f9f9f9;
-            color: #333;
+            font-size: 22px;
+            font-weight: 700;
+            color: #fff;
+            flex-shrink: 0;
+            letter-spacing: 1px;
         }
-        .container {
-            text-align: center;
-            padding: 40px 20px;
+
+        .profile-info h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 6px;
         }
-        h1 {
-            font-size: 2.4rem;
-            margin-bottom: 16px;
+
+        .profile-info p {
+            font-size: 0.95rem;
+            color: #888;
+            line-height: 1.6;
         }
-        p {
-            font-size: 1.1rem;
-            color: #666;
+
+        /* ── 导航卡片 ── */
+        .nav-card {
+            border-radius: 20px;
+            padding: 28px 32px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            text-decoration: none;
+            color: #fff;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+            cursor: pointer;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 32px rgba(0,0,0,0.18);
+        }
+
+        .nav-card:active {
+            transform: translateY(0);
+        }
+
+        .card-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: rgba(255,255,255,0.22);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            flex-shrink: 0;
+        }
+
+        .card-text h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .card-text p {
+            font-size: 0.88rem;
+            opacity: 0.85;
+        }
+
+        .card-arrow {
+            margin-left: auto;
+            font-size: 20px;
+            opacity: 0.7;
+        }
+
+        /* 每张卡片配色 */
+        .card-research  { background: linear-gradient(135deg, #667eea, #764ba2); }
+        .card-learning  { background: linear-gradient(135deg, #11998e, #38ef7d); }
+        .card-projects  { background: linear-gradient(135deg, #f7971e, #ffd200); }
+        .card-other     { background: linear-gradient(135deg, #f953c6, #b91d73); }
+
+        .card-projects .card-text h2,
+        .card-projects .card-text p,
+        .card-projects .card-arrow { color: #3a2800; }
+        .card-learning .card-text h2,
+        .card-learning .card-text p,
+        .card-learning .card-arrow { color: #003d2b; }
+
+        @media (max-width: 480px) {
+            .profile-card { padding: 22px 20px; gap: 18px; }
+            .nav-card     { padding: 22px 20px; }
+            .avatar       { width: 64px; height: 64px; font-size: 17px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>我的博客</h1>
-        <p>欢迎来到我的blog！一个在读研究生的简单网页，暂时没想到写什么~~~</p>
+    <div class="page">
+
+        <!-- 个人卡片 -->
+        <div class="profile-card">
+            <div class="avatar">BMTD</div>
+            <div class="profile-info">
+                <h1>我的博客</h1>
+                <p>欢迎来到我的 blog！<br>一个在读研究生的简单网页，暂时没想到写什么~~~</p>
+            </div>
+        </div>
+
+        <!-- 科研任务 -->
+        <a class="nav-card card-research" href="research.html">
+            <div class="card-icon">🔬</div>
+            <div class="card-text">
+                <h2>科研任务</h2>
+                <p>论文阅读与科研进展</p>
+            </div>
+            <span class="card-arrow">›</span>
+        </a>
+
+        <!-- 项目学习 -->
+        <a class="nav-card card-learning" href="learning.html">
+            <div class="card-icon">📚</div>
+            <div class="card-text">
+                <h2>项目学习</h2>
+                <p>华为项目学习</p>
+            </div>
+            <span class="card-arrow">›</span>
+        </a>
+
+        <!-- 项目 -->
+        <a class="nav-card card-projects" href="projects.html">
+            <div class="card-icon">🛠</div>
+            <div class="card-text">
+                <h2>项目</h2>
+                <p>AI开发各种的~</p>
+            </div>
+            <span class="card-arrow">›</span>
+        </a>
+
+        <!-- 其他 -->
+        <a class="nav-card card-other" href="other.html">
+            <div class="card-icon">✨</div>
+            <div class="card-text">
+                <h2>其他</h2>
+                <p>杂七杂八~</p>
+            </div>
+            <span class="card-arrow">›</span>
+        </a>
+
     </div>
 </body>
 </html>
